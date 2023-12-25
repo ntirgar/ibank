@@ -43,4 +43,4 @@ jobs:
         with:
           name: app-build
       - run: pwd
-      - run: ls
+      - run: ls ibank

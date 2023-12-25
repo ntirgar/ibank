@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,3 +29,14 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
  
+    - uses: actions/upload-artifact@v3
+    - name: 'Upload Artifact'
+      with:
+        name: app-build
+        path: dist
+  
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: app-build
+    - run: ls dist

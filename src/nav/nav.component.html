@@ -1,0 +1,101 @@
+<button
+  mat-flat-button
+  type="button"
+  routerLink="/home"
+  routerLinkActive="accent"
+>
+  <mat-icon class="material-symbols-outlined">{{ 'account_balance' }}</mat-icon>
+  Home
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  routerLink="/dashboard"
+  routerLinkActive="accent"
+>
+  <mat-icon class="material-symbols-outlined"> group </mat-icon>
+  Accounts
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  routerLink="/payment"
+  routerLinkActive="accent"
+>
+  <mat-icon class="material-symbols-outlined"> sync_alt </mat-icon>
+  Payment
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 3 ? 'accent' : ''"
+  (click)="selected = 3"
+>
+  <mat-icon class="material-symbols-outlined"> payments </mat-icon>
+  Loan
+</button>
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 4 ? 'accent' : ''"
+  (click)="selected = 4"
+>
+  <mat-icon class="material-symbols-outlined"> credit_card </mat-icon>
+  Card
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 5 ? 'accent' : ''"
+  (click)="selected = 5"
+>
+  Goverment Scheme
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 6 ? 'accent' : ''"
+  (click)="selected = 6"
+>
+  Tax center
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 7 ? 'accent' : ''"
+  (click)="selected = 7"
+>
+  Invest & Insure
+</button>
+
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 8 ? 'accent' : ''"
+  (click)="selected = 8"
+>
+  Bills and Utilities
+</button>
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 9 ? 'accent' : ''"
+  (click)="selected = 9"
+>
+  FX 4 U
+</button>
+<button
+  mat-flat-button
+  type="button"
+  [color]="this.selected === 10 ? 'accent' : ''"
+  (click)="selected = 10"
+>
+  <mat-icon class="material-symbols-outlined"> credit_card </mat-icon>
+  Other Services
+</button>

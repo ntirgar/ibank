@@ -32,10 +32,11 @@ jobs:
     - run: pwd
     - run: ls
     - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: github-pages
           path: 'dist/demo/browser'
+          retention-days: 7
    
     # Deploy job
   deploy:

@@ -32,7 +32,7 @@ jobs:
     - run: pwd
     - run: ls
     - name: Upload screenshots as a github-pages artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v2
       with:
           name: github-pages
           path: dist/demo/browser

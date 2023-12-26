@@ -34,5 +34,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: ../ibank
+        token: ${{ secrets.TOKEN }}
         repository-name: ntirgar/ntirgar.github.io
    

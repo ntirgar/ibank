@@ -27,6 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: package.json
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
     - run: npm install
     - run: npm run build --if-present
     - run: pwd

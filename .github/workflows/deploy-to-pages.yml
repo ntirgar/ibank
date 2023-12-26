@@ -33,7 +33,7 @@ jobs:
     - run: ls
     - uses: actions/upload-artifact@master
       with:
-        name: page
+        name: github-pages
         path: dist/demo/browser
         if-no-files-found: error
    

@@ -33,7 +33,7 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: ../ibank/dist/demo
+        folder: ../ibank/dist/demo/browser
         token: ${{ secrets.TOKEN }}
         repository-name: ntirgar/ntirgar.github.io
    

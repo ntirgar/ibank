@@ -16,6 +16,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+    ARTIFACT: github-pages
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,8 +36,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: package.json
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
     - run: npm install
     - run: npm run build --if-present
     - run: pwd
@@ -44,7 +45,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: github-pages
+        name: ${{ env.ARTIFACT }}
         path: dist/demo/browser
      
    
@@ -55,8 +56,25 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Download artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: ${{ env.ARTIFACT }}
+
+    - name: Unzip artifact
+      run: unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: dir
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
    

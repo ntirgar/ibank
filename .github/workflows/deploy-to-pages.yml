@@ -33,7 +33,7 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: 'ibank/demo' 
+        folder: '../demo' 
         repository-name: ntirgar.github.io
     - run: pwd
     - run: ls

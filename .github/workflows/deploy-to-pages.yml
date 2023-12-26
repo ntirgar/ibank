@@ -36,7 +36,6 @@ jobs:
       with:
           name: github-pages
           path: dist/demo/browser
-  
    
     # Deploy job
   deploy:

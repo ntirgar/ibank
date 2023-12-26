@@ -45,8 +45,9 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ env.ARTIFACT }}
+        name: docs
         path: dist/demo/browser
+        retention-days: 1
      
    
    # Deployment job
@@ -61,10 +62,10 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v3
       with:
-        name: ${{ env.ARTIFACT }}
+        name: docs
 
     - name: Unzip artifact
-      run: unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
+      run: unzip -O UTF-8 -qq docs -d dir
 
     - name: Setup Pages
       uses: actions/configure-pages@v2

@@ -32,9 +32,7 @@ jobs:
    
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
-    - run: pwd
-    - run: ls
-    #  with:
-    #    folder: '../demo' 
-     #   repository-name: ntirgar.github.io
+      with:
+        folder: . 
+        repository-name: ntirgar.github.io
    

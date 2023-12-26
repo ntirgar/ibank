@@ -32,7 +32,7 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: page
-        path: build
+        path: ../ibank/dist/demo/browser
         if-no-files-found: error
    
     # Deploy job

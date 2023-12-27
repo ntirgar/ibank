@@ -63,7 +63,7 @@ jobs:
         name: github-pages
         path: github-pages
     - run: pwd
-    - run: ls
+    - run: ls github-pages
 
     - name: Setup Pages
       uses: actions/configure-pages@v2

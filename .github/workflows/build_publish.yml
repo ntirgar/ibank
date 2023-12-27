@@ -44,7 +44,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: github-pages
-        path: dist/demo
+        path: dist/demo/browser
         retention-days: 1
      
    
@@ -71,7 +71,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
-        path: github-pages/browser
+        path: github-pages/
         
     - name: Deploy to GitHub Pages
       id: deployment

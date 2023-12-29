@@ -9,13 +9,13 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'donut',
   standalone: true,
-  templateUrl: `
+  template: `
   <svg height="100%" width="100%" viewBox="0 0 120 120">       
      <circle  *ngFor="let item of items;let i=index" cx="60" cy="60" r="50" fill="transparent" stroke-width="20"
      [attr.stroke-dasharray]="getPerimeter(50)" [attr.stroke-dashoffset]="getOffset(50,i)" [attr.stroke]="getColor(i)"/>             
   </svg>
   `,
-  styleUrls: [''],
+  styles: [''],
   imports: [
     MatSidenavModule,
     MatButtonModule,

@@ -20,8 +20,7 @@ import { RouterOutlet } from '@angular/router';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    NavComponent,
-    RouterOutlet,
+   
   ],
 })
 export class DonutComponent{

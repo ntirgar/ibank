@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
 import { DonutComponent } from '../DonutComponent';
 
 interface Card {

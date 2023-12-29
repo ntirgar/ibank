@@ -1,27 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'donut',
   standalone: true,
   template: `
-  <svg height="100%" width="100%" viewBox="0 0 120 120">       
-     <circle  *ngFor="let item of items;let i=index" cx="60" cy="60" r="50" fill="transparent" stroke-width="20"
-     [attr.stroke-dasharray]="getPerimeter(50)" [attr.stroke-dashoffset]="getOffset(50,i)" [attr.stroke]="getColor(i)"/>             
+  <div style="width:400px;height:400px;">
+  <svg height="100%" width="100%" viewBox="0 0 120 120">
+    @for( item of items; track $index ){
+    <circle
+      cx="60"
+      cy="60"
+      r="50"
+      fill="transparent"
+      stroke-width="8"
+      [attr.stroke-dasharray]="getPerimeter(50)"
+      [attr.stroke-dashoffset]="getOffset(50, $index)"
+      [attr.stroke]="item.color"
+    />
+    }
   </svg>
-  `,
-  styles: [''],
-  imports: [
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule,
-   
-  ],
+</div>`,
+  styles: ['']
+
 })
 export class DonutComponent{
 
@@ -44,10 +45,6 @@ export class DonutComponent{
        return Math.PI*2*radius;
      }
    
-     getColor(index:number):string
-     {
-       return this.items[index].color;
-     }
    
      getOffset(radius:number,index:number):number
      {   

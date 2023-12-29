@@ -3,7 +3,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavComponent } from '../nav/nav.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

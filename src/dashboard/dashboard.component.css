@@ -1,6 +1,7 @@
 :host{
   margin: 16px;
   background-color: rgba(0, 0,0,0.1);
+ --mdc-elevated-card-container-shape:24px;
 }
 
 .dashboard-card {
@@ -19,10 +20,6 @@
 
 .dashboard-card-content {
   text-align: center;
-}
-
-mat-card{
-  border-radius: 24px;
 }
 
 .example-card {

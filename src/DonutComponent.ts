@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
   <svg height="100%" width="100%" viewBox="0 0 120 120">
     @for( item of items; track $index ){
     <circle
-      cx="60"
-      cy="60"
+      cx="50"
+      cy="50"
       r="50"
       fill="transparent"
       stroke-width="8"

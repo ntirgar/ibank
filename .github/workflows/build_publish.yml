@@ -44,7 +44,7 @@ jobs:
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.GIT-HUB-PASS-KEY }}
+        API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN}}
       with:
         source-directory: 'dist/demo/browser'
         destination-github-username: 'ntirgar'

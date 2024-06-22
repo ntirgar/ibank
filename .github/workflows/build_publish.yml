@@ -47,6 +47,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist/demo/browser
+    - run: pwd
+    - run: ls
     
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@main

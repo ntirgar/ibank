@@ -47,6 +47,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist/demo/browser
+    - run: ls
     - run: cd dist
     - run: ls
     - run: cd demo
